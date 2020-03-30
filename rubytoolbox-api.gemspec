@@ -33,4 +33,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "guard-bundler"
   spec.add_development_dependency "guard-rspec"
   spec.add_development_dependency "guard-rubocop"
+
+  spec.add_development_dependency "rspec", ">= 3.9"
+  spec.add_development_dependency "simplecov", ">= 0.18.5"
 end

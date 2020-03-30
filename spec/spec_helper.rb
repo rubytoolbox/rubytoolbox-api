@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
+require "simplecov"
 require "rubytoolbox/api"
 
 RSpec.configure do |config|
