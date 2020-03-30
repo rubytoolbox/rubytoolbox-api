@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require "bundler/setup"
 require "simplecov"
+require "bundler/setup"
 require "rubytoolbox/api"
-require "webmock"
+require "webmock/rspec"
 require "vcr"
 
 VCR.configure do |c|

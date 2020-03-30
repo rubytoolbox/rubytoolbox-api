@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.ruby-toolbox.com/api/projects/compare/simplecov,rspec
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.ruby-toolbox.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 30 Mar 2020 20:54:19 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Etag:
+      - W/"94b71d3b89d0ce5923962e66ef50f891"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 94cc28a6-0d27-42dd-adab-5336b563e7dd
+      X-Runtime:
+      - '0.023835'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"projects":[{"permalink":"rspec","categories":[{"permalink":"testing_frameworks","category_group":{"permalink":"Testing","description":null,"name":"Testing"},"description":"Frameworks
+        for writing automated tests for your software","name":"Test Frameworks","urls":{"toolbox_url":"https://www.ruby-toolbox.com/categories/testing_frameworks"}}],"description":"BDD
+        for Ruby","github_repo":{"path":"rspec/rspec","average_recent_committed_at":"2016-10-17T18:30:21.000Z","description":"RSpec
+        meta-gem that depends on the other components","is_archived":false,"is_fork":false,"is_mirror":false,"issues":{"url":"https://github.com/rspec/rspec/issues","open_count":1,"closed_count":18,"total_count":19,"closure_rate":"94.74"},"license":"mit","primary_language":"Ruby","pull_requests":{"url":"https://github.com/rspec/rspec/pulls","open_count":1,"closed_count":10,"merged_count":18,"total_count":29,"acceptance_rate":"62.07"},"repo_pushed_at":"2019-12-18T18:55:35.000Z","stats":{"stargazers_count":2609,"forks_count":206,"watchers_count":95},"url":"https://github.com/rspec/rspec","wiki_url":"https://github.com/rspec/rspec/wiki"},"health":{"overall_level":"yellow","statuses":[{"key":"low_commit_activity","icon":"github","label":"Low
+        commit activity in last 3 years","level":"yellow"},{"key":"rubygem_long_running","icon":"diamond","label":"A
+        long-lived project that still receives updates","level":"green"}]},"name":"rspec","rubygem":{"name":"rspec","current_version":"3.9.0","first_release_on":"2005-08-11","latest_release_on":"2019-10-08","licenses":["MIT"],"stats":{"downloads":475817912,"reverse_dependencies_count":53470,"quarterly_release_counts":{"2005-3":9,"2006-1":4,"2006-2":14,"2006-3":7,"2006-4":7,"2007-1":4,"2007-2":11,"2007-3":3,"2007-4":2,"2008-1":2,"2008-2":1,"2008-3":2,"2008-4":6,"2009-1":4,"2009-2":5,"2009-3":1,"2009-4":1,"2010-1":14,"2010-2":11,"2010-3":6,"2010-4":8,"2011-1":2,"2011-2":5,"2011-4":4,"2012-1":3,"2012-2":1,"2012-3":1,"2012-4":1,"2013-1":1,"2013-2":1,"2013-3":2,"2013-4":2,"2014-1":2,"2014-2":4,"2014-3":1,"2015-1":1,"2015-2":1,"2015-4":1,"2016-1":2,"2016-2":2,"2016-3":1,"2016-4":2,"2017-2":1,"2017-4":1,"2018-3":1,"2019-4":1},"releases_count":166},"url":"https://rubygems.org/gems/rspec"},"score":"48.11","urls":{"bug_tracker_url":"https://github.com/rspec/rspec/issues","changelog_url":null,"documentation_url":"https://rspec.info/documentation/","homepage_url":"http://github.com/rspec","mailing_list_url":"https://groups.google.com/forum/#!forum/rspec","source_code_url":"https://github.com/rspec/rspec","toolbox_url":"https://www.ruby-toolbox.com/projects/rspec","wiki_url":"https://github.com/rspec/rspec/wiki"}},{"permalink":"simplecov","categories":[{"permalink":"code_coverage","category_group":{"permalink":"Code_Quality","description":null,"name":"Code
+        Quality"},"description":"Utilities that report which code is being run. Most
+        commonly this is used as test coverage which reports what parts of your code
+        are not tested, but there are also tools to find dead production code","name":"Code
+        Coverage","urls":{"toolbox_url":"https://www.ruby-toolbox.com/categories/code_coverage"}}],"description":"Code
+        coverage for Ruby with a powerful configuration library and automatic merging
+        of coverage across test suites","github_repo":null,"health":{"overall_level":"green","statuses":[{"key":"rubygem_long_running","icon":"diamond","label":"A
+        long-lived project that still receives updates","level":"green"}]},"name":"simplecov","rubygem":{"name":"simplecov","current_version":"0.18.5","first_release_on":"2010-08-21","latest_release_on":"2020-02-25","licenses":["MIT"],"stats":{"downloads":91833902,"reverse_dependencies_count":10200,"quarterly_release_counts":{"2010-3":6,"2010-4":1,"2011-1":3,"2011-2":1,"2011-3":2,"2011-4":1,"2012-1":2,"2012-2":3,"2012-4":2,"2013-2":1,"2013-3":1,"2013-4":2,"2014-3":2,"2015-1":1,"2015-2":1,"2015-4":2,"2016-1":1,"2016-3":1,"2017-1":3,"2017-3":2,"2018-1":2,"2019-3":2,"2020-1":9},"releases_count":51},"url":"https://rubygems.org/gems/simplecov"},"score":"11.3","urls":{"bug_tracker_url":"https://github.com/colszowka/simplecov/issues","changelog_url":null,"documentation_url":"https://www.rubydoc.info/gems/simplecov/0.18.5","homepage_url":"https://github.com/colszowka/simplecov","mailing_list_url":"https://groups.google.com/forum/#!forum/simplecov","source_code_url":"https://github.com/colszowka/simplecov/tree/v0.18.5","toolbox_url":"https://www.ruby-toolbox.com/projects/simplecov","wiki_url":null}}]}'
+    http_version: null
+  recorded_at: Mon, 30 Mar 2020 20:54:19 GMT
+recorded_with: VCR 5.1.0

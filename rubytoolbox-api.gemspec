@@ -2,6 +2,7 @@
 
 require_relative "lib/rubytoolbox/api/version"
 
+# rubocop:disable Metrics/BlockLength
 Gem::Specification.new do |spec|
   spec.name          = "rubytoolbox-api"
   spec.version       = Rubytoolbox::Api::VERSION
@@ -40,3 +41,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "vcr", ">= 5.1.0"
   spec.add_development_dependency "webmock", ">= 3.8.3"
 end
+# rubocop:enable Metrics/BlockLength
