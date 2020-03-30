@@ -36,4 +36,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "rspec", ">= 3.9"
   spec.add_development_dependency "simplecov", ">= 0.18.5"
+
+  spec.add_development_dependency "vcr", ">= 5.1.0"
+  spec.add_development_dependency "webmock", ">= 3.8.3"
 end

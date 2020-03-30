@@ -3,6 +3,14 @@
 require "bundler/setup"
 require "simplecov"
 require "rubytoolbox/api"
+require "webmock"
+require "vcr"
+
+VCR.configure do |c|
+  c.cassette_library_dir = File.join(__dir__, "vcr_cassettes")
+  c.hook_into :webmock
+  c.configure_rspec_metadata!
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
