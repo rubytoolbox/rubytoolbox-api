@@ -1,5 +1,3 @@
-# Ruby Toolbox API client
-
 <div align="center">
   <img src="https://github.com/rubytoolbox/rubytoolbox/raw/master/app/assets/images/logo/regular.svg?sanitize=true" width="400px" alt="The Ruby Toolbox"/>
 
