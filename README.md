@@ -1,5 +1,13 @@
 # Ruby Toolbox API client
 
+<div align="center">
+  <img src="https://github.com/rubytoolbox/rubytoolbox/raw/master/app/assets/images/logo/regular.svg?sanitize=true" width="400px" alt="The Ruby Toolbox"/>
+
+  ![CI](https://github.com/rubytoolbox/rubytoolbox-api/workflows/CI/badge.svg)
+
+  **This is a simple ruby APi client for the [Ruby Toolbox API](https://www.ruby-toolbox.com/pages/docs/api/projects)**
+</div>
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -18,7 +26,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+Rubytoolbox::Api.new.compare "rails", "sinatra", "hanami"
+```
 
 ## Development
 
