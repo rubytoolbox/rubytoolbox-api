@@ -4,6 +4,7 @@ require "rubytoolbox/api/version"
 require "uri"
 require "json"
 require "net/http"
+require "rubytoolbox/api/response_wrapper"
 
 module Rubytoolbox
   class Api
