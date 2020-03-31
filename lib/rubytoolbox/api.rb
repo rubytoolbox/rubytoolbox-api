@@ -5,6 +5,12 @@ require "uri"
 require "json"
 require "net/http"
 require "rubytoolbox/api/response_wrapper"
+require "rubytoolbox/api/category"
+require "rubytoolbox/api/category_group"
+require "rubytoolbox/api/project"
+require "rubytoolbox/api/health"
+require "rubytoolbox/api/rubygem"
+require "rubytoolbox/api/github_repo"
 
 module Rubytoolbox
   class Api
@@ -23,7 +29,10 @@ module Rubytoolbox
       url = URI(File.join(endpoint_url, "projects", "compare", names.join(",")))
 
       data = handle_response! Net::HTTP.get_response(url)
-      data.fetch("projects")
+
+      data.fetch("projects").map do |project_data|
+        Project.new project_data
+      end
     end
 
     private

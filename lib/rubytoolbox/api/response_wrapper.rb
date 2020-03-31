@@ -38,7 +38,9 @@ module Rubytoolbox
 
       def initialize(data)
         self.class.fields.each do |name|
-          send "#{name}=", data[name.to_s] || data[name.to_sym]
+          value = data.key?(name.to_s) ? data[name.to_s] : data[name.to_sym]
+
+          send "#{name}=", value unless value.nil?
         end
       end
     end

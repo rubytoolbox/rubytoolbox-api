@@ -14,4 +14,8 @@ RSpec.describe Rubytoolbox::Api::ResponseWrapper do
       bar: "rab"
     )
   end
+
+  it "correctly handles false value when given as string key" do
+    expect(sample.new("foo" => false, bar: "123").foo).to be == false
+  end
 end
