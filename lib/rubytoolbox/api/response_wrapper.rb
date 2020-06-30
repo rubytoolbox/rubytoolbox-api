@@ -43,6 +43,26 @@ module Rubytoolbox
           send "#{name}=", value unless value.nil?
         end
       end
+
+      def to_h
+        self.class.fields.each_with_object({}) do |field, hash|
+          value = public_send field
+
+          hash[field] = hashify(value)
+        end
+      end
+
+      private
+
+      def hashify(input)
+        if input.is_a? Array
+          input.map { |item| hashify(item) }
+        elsif input.is_a? Rubytoolbox::Api::ResponseWrapper
+          input.to_h
+        else
+          input
+        end
+      end
     end
   end
 end
