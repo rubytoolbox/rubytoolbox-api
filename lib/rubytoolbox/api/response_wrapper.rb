@@ -55,9 +55,10 @@ module Rubytoolbox
       private
 
       def hashify(input)
-        if input.is_a? Array
+        case input
+        when Array
           input.map { |item| hashify(item) }
-        elsif input.is_a? Rubytoolbox::Api::ResponseWrapper
+        when Rubytoolbox::Api::ResponseWrapper
           input.to_h
         else
           input
