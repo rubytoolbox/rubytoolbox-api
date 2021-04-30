@@ -6,6 +6,7 @@
 # Additional cops for working with RSpec. See https://github.com/backus/rubocop-rspec
 require:
   - rubocop-performance
+  - rubocop-rake
   - rubocop-rspec
 
 AllCops:
@@ -14,6 +15,7 @@ AllCops:
     - 'tmp/**/*.rb'
     # See https://qiita.com/ozhaan/items/40ea864757162e931be1
     - 'vendor/**/*'
+  TargetRubyVersion: 2.5.0
 
 Metrics/BlockLength:
   Exclude:

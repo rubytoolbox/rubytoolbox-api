@@ -1,17 +1,18 @@
 name: CI
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
-  build:
+  rspec:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         ruby:
+        - '3.0'
         - '2.7'
         - '2.6'
         - '2.5'
@@ -27,3 +28,26 @@ jobs:
         gem install bundler
         bundle install --jobs 4 --retry 3
         bundle exec rspec
+
+  rubocop:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby:
+        - '3.0'
+        - '2.7'
+        - '2.6'
+        - '2.5'
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: "${{matrix.ruby}}"
+    - name: Install dependencies and run rubocop"
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rubocop

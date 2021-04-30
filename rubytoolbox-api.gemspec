@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = spec.summary
   spec.homepage      = "https://www.ruby-toolbox.com"
   spec.license       = "MIT"
-  spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
+  spec.required_ruby_version = Gem::Requirement.new(">= 2.5.0")
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/rubytoolbox/rubytoolbox-api"
@@ -29,6 +29,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "rubocop"
   spec.add_development_dependency "rubocop-performance"
+  spec.add_development_dependency "rubocop-rake"
   spec.add_development_dependency "rubocop-rspec"
 
   spec.add_development_dependency "guard-bundler"
