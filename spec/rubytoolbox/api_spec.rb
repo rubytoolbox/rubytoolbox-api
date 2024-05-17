@@ -4,16 +4,16 @@ RSpec.describe Rubytoolbox::Api do
   let(:client) { described_class.new }
 
   it "has a version number" do
-    expect(Rubytoolbox::Api::VERSION).not_to be nil
+    expect(Rubytoolbox::Api::VERSION).not_to be_nil
   end
 
   describe "initializer" do
     it "defaults endpoint_url to https://www.ruby-toolbox.com/api/" do
-      expect(described_class.new.endpoint_url).to be == "https://www.ruby-toolbox.com/api/"
+      expect(described_class.new.endpoint_url).to eq "https://www.ruby-toolbox.com/api/"
     end
 
     it "accepts a custom endpoint_url" do
-      expect(described_class.new(url: "http://localhost:5000/api/").endpoint_url).to be == "http://localhost:5000/api/"
+      expect(described_class.new(url: "http://localhost:5000/api/").endpoint_url).to eq "http://localhost:5000/api/"
     end
   end
 

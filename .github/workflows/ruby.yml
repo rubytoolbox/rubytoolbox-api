@@ -12,15 +12,13 @@ jobs:
       fail-fast: false
       matrix:
         ruby:
-        - '3.0'
-        - '2.7'
-        - '2.6'
-        - '2.5'
+        - '3.3'
+        - '3.2'
 
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
-      uses: actions/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: "${{matrix.ruby}}"
     - name: Install dependencies and run RSpec
@@ -35,15 +33,13 @@ jobs:
       fail-fast: false
       matrix:
         ruby:
-        - '3.0'
-        - '2.7'
-        - '2.6'
-        - '2.5'
+        - '3.3'
+        - '3.2'
 
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
-      uses: actions/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: "${{matrix.ruby}}"
     - name: Install dependencies and run rubocop"
