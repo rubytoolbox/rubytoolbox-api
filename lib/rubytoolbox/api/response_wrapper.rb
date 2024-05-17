@@ -23,12 +23,12 @@ module Rubytoolbox
 
           block ||= ->(value) { value }
 
-          define_method "#{name}=" do |value|
-            instance_variable_set "@#{name}", block.call(value)
+          define_method :"#{name}=" do |value|
+            instance_variable_set :"@#{name}", block.call(value)
           end
 
           attr_reader name
-          private "#{name}="
+          private :"#{name}="
         end
 
         def fields
@@ -40,7 +40,7 @@ module Rubytoolbox
         self.class.fields.each do |name|
           value = data.key?(name.to_s) ? data[name.to_s] : data[name.to_sym]
 
-          send "#{name}=", value unless value.nil?
+          send :"#{name}=", value unless value.nil?
         end
       end
 

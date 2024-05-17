@@ -2,7 +2,6 @@
 
 require_relative "lib/rubytoolbox/api/version"
 
-# rubocop:disable Metrics/BlockLength
 Gem::Specification.new do |spec|
   spec.name          = "rubytoolbox-api"
   spec.version       = Rubytoolbox::Api::VERSION
@@ -27,19 +26,5 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "rubocop"
-  spec.add_development_dependency "rubocop-performance"
-  spec.add_development_dependency "rubocop-rake"
-  spec.add_development_dependency "rubocop-rspec"
-
-  spec.add_development_dependency "guard-bundler"
-  spec.add_development_dependency "guard-rspec"
-  spec.add_development_dependency "guard-rubocop"
-
-  spec.add_development_dependency "rspec", ">= 3.9"
-  spec.add_development_dependency "simplecov", ">= 0.18.5"
-
-  spec.add_development_dependency "vcr", ">= 5.1.0"
-  spec.add_development_dependency "webmock", ">= 3.8.3"
+  spec.metadata["rubygems_mfa_required"] = "true"
 end
-# rubocop:enable Metrics/BlockLength

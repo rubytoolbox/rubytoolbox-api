@@ -30,7 +30,7 @@ RSpec.describe Rubytoolbox::Api::ResponseWrapper do
   end
 
   it "correctly handles false value when given as string key" do
-    expect(sample.new("foo" => false, bar: "123").foo).to be == false
+    expect(sample.new("foo" => false, bar: "123").foo).to be false
   end
 
   it "can be converted back to a hash" do # rubocop:disable RSpec/ExampleLength
@@ -41,7 +41,7 @@ RSpec.describe Rubytoolbox::Api::ResponseWrapper do
       subcollection: [{ key: "value" }]
     )
 
-    expect(object.to_h).to be == {
+    expect(object.to_h).to eq(
       "foo" => "foo",
       "bar" => "rab",
       "sub" => {
@@ -49,7 +49,7 @@ RSpec.describe Rubytoolbox::Api::ResponseWrapper do
       },
       "subcollection" => [
         { "key" => "value" },
-      ],
-    }
+      ]
+    )
   end
 end
